@@ -1,0 +1,108 @@
+body{
+    background-color: black;
+   
+}
+h1{
+    text-transform: capitalize;
+    color: white;
+}
+#score {
+    color: rgba(13, 53, 22, 0.651);
+    position: absolute;
+    top: 1vh;
+    right: 25vw;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#box {
+    margin: 3% auto;
+    position: relative;
+    border: 1px solid black;
+    height: 70vh;
+    width: 80vw;
+    background-image: url("assets/ninja_background.jpg");
+    overflow-x: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#ninja {
+    position: absolute;
+    bottom: 0vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(-1, 1);
+    height: 250px;
+    left: 15vw;
+
+}
+#obsticle{
+    height: 150px;
+    width: 140px;
+    background-image: url("assets/villl.gif");
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    bottom: 0vh;
+    left: 81vw;
+    animation: move_obsticle 3s infinite;
+}
+.jump-animation {
+    animation: jump 1s infinite;
+}
+
+
+@keyframes jump {
+    0% {
+        bottom: 0vh;
+        left: 20vw;
+    }
+
+    25% {
+        bottom: 15vh;
+        left: 22vw;
+    }
+
+    50% {
+        bottom: 20vh;
+        left: 30vw;
+    }
+
+    70% {
+        bottom: 17vh;
+        left: 30vw;
+    }
+
+    100% {
+        bottom: 0vh;
+        left: 30vw;
+    }
+}
+
+
+
+@keyframes move_obsticle{
+    0% {
+        bottom: 40vh;
+        left: 70vw;
+    }
+    25% {
+        bottom: 20vh;
+      
+    }
+
+    50% {
+        bottom: 9vh;
+       left: 40vw;
+    }
+
+    70% {
+        bottom: 17vh;
+        left: 30vw
+    }
+    100%{
+        bottom: 3vh;
+       left: -20vw;
+    }
+}
